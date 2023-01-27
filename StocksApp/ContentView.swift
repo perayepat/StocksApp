@@ -8,18 +8,20 @@ struct ContentView: View {
         
         NavigationView {
             List{
-                ForEach(0...10, id: \.self) { number in
-                    HStack{
-                        Text("Number \(number)")
-                        
-                        Spacer()
-                        
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 150, height: 50)
-                        
-                        VStack(alignment: .trailing){
-                            Text("Value")
-                            Text("Change")
+                if !model.stockData.isEmpty{
+                    ForEach(model.stockData) { stock in
+                        HStack{
+                            Text(stock.metaData.symbol)
+                            
+                            Spacer()
+                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 150, height: 50)
+                            
+                            VStack(alignment: .trailing){
+                                Text(stock.latestClose)
+                                Text("Change")
+                            }
                         }
                     }
                 }

@@ -4,9 +4,17 @@ import Combine
 
 final class ContentViewModel: ObservableObject{
     private var cancellables = Set<AnyCancellable>()
-    
+    private let symbol: [String] = ["AAPL", "TSLA", "IBM"]
+    @Published var stockData: [StockData] = []
     init() {
-        getStockData(for: "IBM")
+        loadAllSymbols()
+    }
+    
+    func loadAllSymbols(){
+        stockData = []
+        symbol.forEach { symbol in
+            getStockData(for: symbol)
+        }
     }
     
     func getStockData(for symbol: String){
@@ -29,8 +37,10 @@ final class ContentViewModel: ObservableObject{
                 case .finished:
                     return
                 }
-            } receiveValue: { stockData in
-                print(stockData)
+            } receiveValue: { [unowned self]stockData in /// Refrence cycles
+                DispatchQueue.main.async { /// UI From the content view is being updated so this need to be in a dispathc queue
+                    self.stockData.append(stockData)
+                }
             }
             .store(in: &cancellables)
 
