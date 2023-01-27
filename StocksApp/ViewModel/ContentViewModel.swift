@@ -11,10 +11,13 @@ final class ContentViewModel: ObservableObject {
     @Published var stockData: [StockData] = []
     @Published var searchSymbol = ""
     @Published var stockEntities : [StockEntity] = []
+    @Published var symbolValid = false
+    
     
     init() {
         loadFromCoreData()
         loadAllSymbols()
+        validdateSymbolField()
     }
     
     func loadAllSymbols(){
@@ -93,4 +96,17 @@ extension ContentViewModel{
         
     }
     
+}
+
+//MARK: - Form Validation
+extension ContentViewModel{
+    ///Combine allows you to use published variables as publishers by adding the dollar symbol
+    func validdateSymbolField(){
+        $searchSymbol
+            .sink { [unowned self] newValue in
+                //MARK: - each time the user changes the text
+                self.symbolValid = !newValue.isEmpty
+            }
+            .store(in: &cancellables)
+    }
 }
