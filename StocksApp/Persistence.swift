@@ -1,10 +1,3 @@
-//
-//  Persistence.swift
-//  StocksApp
-//
-//  Created by Pat on 2023/01/27.
-//
-
 import CoreData
 
 struct PersistenceController {
