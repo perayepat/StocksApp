@@ -15,13 +15,19 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                            RoundedRectangle(cornerRadius: 10)
+                            LineChart(values: stock.closeValues)
+                                .fill(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [.green, .green.opacity(0)]),
+                                    startPoint: .top,
+                                    endPoint: .bottom))
                                 .frame(width: 150, height: 50)
                             
                             VStack(alignment: .trailing){
                                 Text(stock.latestClose)
                                 Text("Change")
                             }
+                            .frame(width: 100)
                         }
                     }
                 }

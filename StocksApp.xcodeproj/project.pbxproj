@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435E5BCE29845A7500D4211C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E5BCD29845A7500D4211C /* LineChart.swift */; };
 		43BA1931298442F100EAA866 /* StocksAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA1930298442F100EAA866 /* StocksAppApp.swift */; };
 		43BA1933298442F100EAA866 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA1932298442F100EAA866 /* ContentView.swift */; };
 		43BA1935298442F300EAA866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BA1934298442F300EAA866 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		435E5BCD29845A7500D4211C /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		43BA192D298442F100EAA866 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BA1930298442F100EAA866 /* StocksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppApp.swift; sourceTree = "<group>"; };
 		43BA1932298442F100EAA866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435E5BCC29845A6100D4211C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43BA1932298442F100EAA866 /* ContentView.swift */,
+				435E5BCD29845A7500D4211C /* LineChart.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		43BA1924298442F100EAA866 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +72,10 @@
 		43BA192F298442F100EAA866 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				435E5BCC29845A6100D4211C /* View */,
 				43F93C4829844D0300669343 /* ViewModel */,
 				43F93C45298448E800669343 /* Models */,
 				43BA1930298442F100EAA866 /* StocksAppApp.swift */,
-				43BA1932298442F100EAA866 /* ContentView.swift */,
 				43BA1934298442F300EAA866 /* Assets.xcassets */,
 				43BA1939298442F300EAA866 /* Persistence.swift */,
 				43BA193B298442F300EAA866 /* StocksApp.xcdatamodeld */,
@@ -172,6 +183,7 @@
 				43BA1944298444BE00EAA866 /* UserDefualtKeys.swift in Sources */,
 				43F93C47298448F600669343 /* StockModel.swift in Sources */,
 				43F93C4A29844D1A00669343 /* ContentViewModel.swift in Sources */,
+				435E5BCE29845A7500D4211C /* LineChart.swift in Sources */,
 				43BA1933298442F100EAA866 /* ContentView.swift in Sources */,
 				43BA193D298442F300EAA866 /* StocksApp.xcdatamodeld in Sources */,
 				43BA1931298442F100EAA866 /* StocksAppApp.swift in Sources */,
