@@ -30,11 +30,11 @@ struct ContentView: View {
                             
                             VStack(alignment: .trailing){
                                 Text(stock.latestClose)
-                                Text("Change")
                             }
                             .frame(width: 100)
                         }
                     }
+                    .onDelete(perform: model.delete(at:))
                 }
             }
             .navigationTitle("My Stocks")

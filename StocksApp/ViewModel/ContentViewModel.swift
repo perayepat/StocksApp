@@ -74,8 +74,23 @@ extension ContentViewModel{
             print(error)
         }
         
+        stockEntities.append(newStock)
         getStockData(for: searchSymbol)
         searchSymbol = ""
+    }
+    
+    func delete(at indexSet: IndexSet){
+        guard let index = indexSet.first else { return }
+        
+        stockData.remove(at: index)
+        let stockToRemove = stockEntities.remove(at: index)
+        context.delete(stockToRemove)
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
     
 }
