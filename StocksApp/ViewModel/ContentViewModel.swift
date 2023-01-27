@@ -2,18 +2,25 @@ import SwiftUI
 import Foundation
 import Combine
 
-final class ContentViewModel: ObservableObject{
+final class ContentViewModel: ObservableObject {
+    
+    private let context = PersistenceController.shared.container.viewContext
+    
     private var cancellables = Set<AnyCancellable>()
-    private let symbol: [String] = ["AAPL", "TSLA", "IBM"]
+    
     @Published var stockData: [StockData] = []
+    @Published var searchSymbol = ""
+    @Published var stockEntities : [StockEntity] = []
+    
     init() {
+        loadFromCoreData()
         loadAllSymbols()
     }
     
     func loadAllSymbols(){
         stockData = []
-        symbol.forEach { symbol in
-            getStockData(for: symbol)
+        stockEntities.forEach { stockEntity in
+            getStockData(for: stockEntity.symbol ?? "")
         }
     }
     
@@ -43,7 +50,32 @@ final class ContentViewModel: ObservableObject{
                 }
             }
             .store(in: &cancellables)
+    }
+}
 
+//MARK: - Core Data Functions
+extension ContentViewModel{
+    
+    func loadFromCoreData(){
+        do {
+            stockEntities = try context.fetch(StockEntity.fetchRequest())
+        } catch {
+            print(error)
+        }
+    }
+    
+    func addStock(){
+        let newStock = StockEntity(context: context)
+        newStock.symbol = searchSymbol
+        
+        do{
+            try context.save()
+        } catch {
+            print(error)
+        }
+        
+        getStockData(for: searchSymbol)
+        searchSymbol = ""
     }
     
 }

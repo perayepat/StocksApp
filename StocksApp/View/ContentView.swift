@@ -8,6 +8,11 @@ struct ContentView: View {
         
         NavigationView {
             List{
+                HStack{
+                    TextField("Search for stock", text: $model.searchSymbol)
+                        .textFieldStyle(.roundedBorder)
+                    Button("Add", action: model.addStock)
+                }
                 if !model.stockData.isEmpty{
                     ForEach(model.stockData) { stock in
                         HStack{
