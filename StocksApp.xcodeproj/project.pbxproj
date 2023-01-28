@@ -61,6 +61,7 @@
 		435E5BDE29850E9300D4211C /* StocksWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = StocksWidget.intentdefinition; sourceTree = "<group>"; };
 		435E5BDF29850E9400D4211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		435E5BE129850E9400D4211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435E5BEB298510AB00D4211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43BA192D298442F100EAA866 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BA1930298442F100EAA866 /* StocksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppApp.swift; sourceTree = "<group>"; };
 		43BA1932298442F100EAA866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		43BA192F298442F100EAA866 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				435E5BEB298510AB00D4211C /* Info.plist */,
 				435E5BCC29845A6100D4211C /* View */,
 				43F93C4829844D0300669343 /* ViewModel */,
 				43F93C45298448E800669343 /* Models */,
@@ -496,6 +498,7 @@
 				DEVELOPMENT_TEAM = 8K52FAQ674;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,6 +529,7 @@
 				DEVELOPMENT_TEAM = 8K52FAQ674;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

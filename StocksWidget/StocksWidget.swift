@@ -1,10 +1,3 @@
-//
-//  StocksWidget.swift
-//  StocksWidget
-//
-//  Created by Pat on 2023/01/28.
-//
-
 import WidgetKit
 import SwiftUI
 import Intents
@@ -44,7 +37,10 @@ struct StocksWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack {
+            Text(entry.date, style: .time)
+            Text(entry.configuration.symbol ?? "No value")
+        }
     }
 }
 
@@ -57,12 +53,13 @@ struct StocksWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([.systemMedium])
     }
 }
 
 struct StocksWidget_Previews: PreviewProvider {
     static var previews: some View {
         StocksWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
