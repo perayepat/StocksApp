@@ -32,6 +32,9 @@
 		43BA193D298442F300EAA866 /* StocksApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43BA193B298442F300EAA866 /* StocksApp.xcdatamodeld */; };
 		43BA1944298444BE00EAA866 /* UserDefualtKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA1943298444BE00EAA866 /* UserDefualtKeys.swift */; };
 		43C0651C2985AFAD004B19D0 /* MediumSizedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C0651B2985AFAD004B19D0 /* MediumSizedWidget.swift */; };
+		43C065232985B131004B19D0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C065222985B131004B19D0 /* Intents.framework */; };
+		43C065262985B131004B19D0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C065252985B131004B19D0 /* IntentHandler.swift */; };
+		43C0652A2985B131004B19D0 /* StocksAppIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43C065212985B131004B19D0 /* StocksAppIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		43F93C47298448F600669343 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F93C46298448F600669343 /* StockModel.swift */; };
 		43F93C4A29844D1A00669343 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F93C4929844D1A00669343 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,13 @@
 			remoteGlobalIDString = 435E5BD229850E9200D4211C;
 			remoteInfo = StocksWidgetExtension;
 		};
+		43C065282985B131004B19D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BA1925298442F100EAA866 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43C065202985B131004B19D0;
+			remoteInfo = StocksAppIntents;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +64,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				435E5BE629850E9400D4211C /* StocksWidgetExtension.appex in Embed Foundation Extensions */,
+				43C0652A2985B131004B19D0 /* StocksAppIntents.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +95,10 @@
 		43BA193C298442F300EAA866 /* StocksApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StocksApp.xcdatamodel; sourceTree = "<group>"; };
 		43BA1943298444BE00EAA866 /* UserDefualtKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefualtKeys.swift; sourceTree = "<group>"; };
 		43C0651B2985AFAD004B19D0 /* MediumSizedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSizedWidget.swift; sourceTree = "<group>"; };
+		43C065212985B131004B19D0 /* StocksAppIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StocksAppIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C065222985B131004B19D0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		43C065252985B131004B19D0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		43C065272985B131004B19D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F93C46298448F600669343 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		43F93C4929844D1A00669343 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +120,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43C0651E2985B131004B19D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C065232985B131004B19D0 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,6 +145,7 @@
 			children = (
 				435E5BD529850E9200D4211C /* WidgetKit.framework */,
 				435E5BD729850E9200D4211C /* SwiftUI.framework */,
+				43C065222985B131004B19D0 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +179,7 @@
 			children = (
 				43BA192F298442F100EAA866 /* StocksApp */,
 				435E5BD929850E9200D4211C /* StocksWidget */,
+				43C065242985B131004B19D0 /* StocksAppIntents */,
 				435E5BD429850E9200D4211C /* Frameworks */,
 				43BA192E298442F100EAA866 /* Products */,
 			);
@@ -165,6 +190,7 @@
 			children = (
 				43BA192D298442F100EAA866 /* StocksApp.app */,
 				435E5BD329850E9200D4211C /* StocksWidgetExtension.appex */,
+				43C065212985B131004B19D0 /* StocksAppIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +219,15 @@
 				43BA1937298442F300EAA866 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43C065242985B131004B19D0 /* StocksAppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				43C065252985B131004B19D0 /* IntentHandler.swift */,
+				43C065272985B131004B19D0 /* Info.plist */,
+			);
+			path = StocksAppIntents;
 			sourceTree = "<group>";
 		};
 		43F93C45298448E800669343 /* Models */ = {
@@ -244,11 +279,29 @@
 			);
 			dependencies = (
 				435E5BE529850E9400D4211C /* PBXTargetDependency */,
+				43C065292985B131004B19D0 /* PBXTargetDependency */,
 			);
 			name = StocksApp;
 			productName = StocksApp;
 			productReference = 43BA192D298442F100EAA866 /* StocksApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		43C065202985B131004B19D0 /* StocksAppIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C0652B2985B131004B19D0 /* Build configuration list for PBXNativeTarget "StocksAppIntents" */;
+			buildPhases = (
+				43C0651D2985B131004B19D0 /* Sources */,
+				43C0651E2985B131004B19D0 /* Frameworks */,
+				43C0651F2985B131004B19D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StocksAppIntents;
+			productName = StocksAppIntents;
+			productReference = 43C065212985B131004B19D0 /* StocksAppIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -264,6 +317,9 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					43BA192C298442F100EAA866 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					43C065202985B131004B19D0 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -283,6 +339,7 @@
 			targets = (
 				43BA192C298442F100EAA866 /* StocksApp */,
 				435E5BD229850E9200D4211C /* StocksWidgetExtension */,
+				43C065202985B131004B19D0 /* StocksAppIntents */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +359,13 @@
 			files = (
 				43BA1938298442F300EAA866 /* Preview Assets.xcassets in Resources */,
 				43BA1935298442F300EAA866 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43C0651F2985B131004B19D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +407,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43C0651D2985B131004B19D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C065262985B131004B19D0 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -350,6 +422,11 @@
 			isa = PBXTargetDependency;
 			target = 435E5BD229850E9200D4211C /* StocksWidgetExtension */;
 			targetProxy = 435E5BE429850E9400D4211C /* PBXContainerItemProxy */;
+		};
+		43C065292985B131004B19D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43C065202985B131004B19D0 /* StocksAppIntents */;
+			targetProxy = 43C065282985B131004B19D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -584,6 +661,56 @@
 			};
 			name = Release;
 		};
+		43C0652C2985B131004B19D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K52FAQ674;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksAppIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StocksAppIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pae.StocksApp.StocksAppIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43C0652D2985B131004B19D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K52FAQ674;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksAppIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StocksAppIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pae.StocksApp.StocksAppIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,6 +737,15 @@
 			buildConfigurations = (
 				43BA1941298442F300EAA866 /* Debug */,
 				43BA1942298442F300EAA866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43C0652B2985B131004B19D0 /* Build configuration list for PBXNativeTarget "StocksAppIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43C0652C2985B131004B19D0 /* Debug */,
+				43C0652D2985B131004B19D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
