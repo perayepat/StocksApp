@@ -38,7 +38,7 @@ class Provider: IntentTimelineProvider {
             .getStockData(for: configuratuion.symbol ?? "IBM")
             .sink { _ in } receiveValue: { stockData in
                 let entry = SimpleEntry(date: date, configuration: configuratuion, stockData: stockData)
-                let timeline = Timeline(entries: [entry], policy: .atEnd)
+                let timeline = Timeline(entries: [entry,entry], policy: .atEnd)
                 
                 completion(timeline)
             }

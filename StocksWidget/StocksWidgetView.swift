@@ -2,18 +2,18 @@ import SwiftUI
 import WidgetKit
 
 struct StocksWidgetEntryView : View {
+    
+    @Environment(\.widgetFamily) var family
     var entry: SimpleEntry
 
     var body: some View {
-        VStack {
-            Text(entry.configuration.symbol ?? "No value")
-            LineChart(values: entry.stockData?.closeValues ?? [])
-                .fill(
-                LinearGradient(
-                    gradient: Gradient(colors: [.green, .green.opacity(0)]),
-                    startPoint: .top,
-                    endPoint: .bottom))
-                .frame(width: 150, height: 50)
+        switch family{
+        case .systemSmall:
+            Text("")
+        case .systemMedium:
+            MediumSizedWidget(entry: entry)
+        default:
+            Text("Not implemented")
         }
     }
 }
