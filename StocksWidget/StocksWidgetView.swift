@@ -11,7 +11,17 @@ struct StocksWidgetEntryView : View {
         case .systemSmall:
             Text("")
         case .systemMedium:
-            MediumSizedWidget(entry: entry)
+            VStack {
+                Text(entry.configuration.customSymbol?.identifier ?? "No custom symbol selected")
+                Text(entry.configuration.symbol ?? "No value")
+                LineChart(values: entry.stockData?.closeValues ?? [])
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.green, .green.opacity(0)]),
+                            startPoint: .top,
+                            endPoint: .bottom))
+                    .frame(width: 150, height: 50)
+            }
         default:
             Text("Not implemented")
         }

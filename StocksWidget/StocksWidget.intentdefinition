@@ -80,6 +80,8 @@
 				<dict>
 					<key>INIntentParameterConfigurable</key>
 					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Custom Symbol</string>
 					<key>INIntentParameterDisplayNameID</key>
@@ -97,16 +99,46 @@
 						<dict>
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Dynamic prompts</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>8M5yNq</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Configuration</string>
 						</dict>
 						<dict>
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Custom Symbol</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>x5vpdA</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${customSymbol}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>vvIXZJ</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${customSymbol}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>1860RH</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
 					</array>
+					<key>INIntentParameterSupportsDynamicEnumeration</key>
+					<true/>
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>

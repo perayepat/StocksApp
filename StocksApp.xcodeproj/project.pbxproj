@@ -35,6 +35,8 @@
 		43C065232985B131004B19D0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C065222985B131004B19D0 /* Intents.framework */; };
 		43C065262985B131004B19D0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C065252985B131004B19D0 /* IntentHandler.swift */; };
 		43C0652A2985B131004B19D0 /* StocksAppIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43C065212985B131004B19D0 /* StocksAppIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		43C0652E2985B14F004B19D0 /* StocksWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 435E5BDE29850E9300D4211C /* StocksWidget.intentdefinition */; };
+		43C0652F2985B2D8004B19D0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C065252985B131004B19D0 /* IntentHandler.swift */; };
 		43F93C47298448F600669343 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F93C46298448F600669343 /* StockModel.swift */; };
 		43F93C4A29844D1A00669343 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F93C4929844D1A00669343 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -386,6 +388,7 @@
 				435E5BF8298516BF00D4211C /* UserDefualtKeys.swift in Sources */,
 				435E5BF2298515C400D4211C /* LineChart.swift in Sources */,
 				435E5BE229850E9400D4211C /* StocksWidget.intentdefinition in Sources */,
+				43C0652F2985B2D8004B19D0 /* IntentHandler.swift in Sources */,
 				435E5BED298514EB00D4211C /* TimelineProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C065262985B131004B19D0 /* IntentHandler.swift in Sources */,
+				43C0652E2985B14F004B19D0 /* StocksWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

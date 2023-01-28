@@ -1,19 +1,25 @@
-//
-//  IntentHandler.swift
-//  StocksAppIntents
-//
-//  Created by Pat on 2023/01/28.
-//
-
 import Intents
 
-class IntentHandler: INExtension {
-    
-    override func handler(for intent: INIntent) -> Any {
-        // This is the default implementation.  If you want different objects to handle different intents,
-        // you can override this and return the handler you want for that particular intent.
+class IntentHandler: INExtension, ConfigurationIntentHandling {
+    func resolveSymbol(for intent: ConfigurationIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
         
-        return self
     }
     
+
+    func resolveCustomSymbol(for intent: ConfigurationIntent, with completion: @escaping (CustomSymbolResolutionResult) -> Void) {
+        
+    }
+    
+
+    
+    func provideCustomSymbolOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<CustomSymbol>?,Error?) -> Void ){
+        
+        let symbols : [CustomSymbol] = [
+            CustomSymbol(identifier: "AAPL", display: "Apple", pronunciationHint: "Apple"),
+            CustomSymbol(identifier: "TSLA", display: "Tesla", pronunciationHint: "Tesla")
+        ]
+        
+        let collection = INObjectCollection(items: symbols)
+        completion(collection,nil)
+    }
 }

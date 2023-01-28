@@ -12,15 +12,13 @@ struct StocksWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
-        .supportedFamilies([.systemSmall,.systemMedium])
+        .supportedFamilies([.systemMedium])
     }
 }
 
 struct StocksWidget_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
             StocksWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(),stockData: nil))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
-        }
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
