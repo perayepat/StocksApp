@@ -39,6 +39,7 @@ class Provider: IntentTimelineProvider {
             .sink { _ in } receiveValue: { stockData in
                 let entry = SimpleEntry(date: date, configuration: configuratuion, stockData: stockData)
                 let timeline = Timeline(entries: [entry], policy: .atEnd)
+                
                 completion(timeline)
             }
             .store(in: &cancellables)
