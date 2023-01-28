@@ -6,9 +6,14 @@ struct StocksWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text(entry.date, style: .time)
             Text(entry.configuration.symbol ?? "No value")
-            Text(entry.stockData?.latestClose ?? "-")
+            LineChart(values: entry.stockData?.closeValues ?? [])
+                .fill(
+                LinearGradient(
+                    gradient: Gradient(colors: [.green, .green.opacity(0)]),
+                    startPoint: .top,
+                    endPoint: .bottom))
+                .frame(width: 150, height: 50)
         }
     }
 }
