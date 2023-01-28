@@ -18,6 +18,14 @@ struct StockData: Codable, Identifiable {
         return rawValues.map { ($0 - min * 0.95) / (max - min * 0.95)}
     }
     
+    var url: URL{
+        guard let url = URL(string: "stocksapp://symbol/\(metaData.symbol)") else {
+            fatalError("Failed to construct url")
+        }
+        
+        return url
+    }
+    
     enum CodingKeys: String, CodingKey {
         case metaData = "Meta Data"
         case timeSeries5Min = "Time Series (5min)"

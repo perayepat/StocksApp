@@ -22,6 +22,8 @@ struct StocksWidgetEntryView : View {
                             endPoint: .bottom))
                     .frame(width: 150, height: 50)
             }
+            .widgetURL(entry.stockData?.url)
+            // can alternativley be wrapped in a link
         default:
             Text("Not implemented")
         }
